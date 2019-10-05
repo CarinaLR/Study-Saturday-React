@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import StudentList from './StudentList'
 
 export default class Main extends Component {
   constructor(props) {
@@ -39,9 +40,11 @@ export default class Main extends Component {
                 </tr>
               );
             })}
+            <tr><StudentList students={this.state.students} /></tr>
           </tbody>
         </table>
       </div>
     );
   }
 }
+//to create props we passed the this.state.stundent with a key.
